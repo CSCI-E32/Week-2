@@ -1,12 +1,5 @@
-# Week 2 In Class
-
-*TODO: yeoman bootstrap*
-
-*Start with a button that creates a new list item*
-
-* *List item is created in an localStorage array and then to the DOM*
-
-*Start with a button that removes a selected list item*
+# Week 2: Testing
+*In Class*
 
 ## Encapsulation
 
@@ -16,7 +9,9 @@
 ## Add Jasmine to the project
 
 1. Download Jasmine
-2. Run it for the first time
+2. Follow Jasmine install directions
+3. Run it for the first time
+4. Look at the structure of Spec and Module
 
 ## Write some Jasmine tests
 
@@ -24,5 +19,3 @@
 2. Test to see if the DOM element is added
 3. Test to see if the button removes the item from the array
 3. Test to see if the DOM no longer contains the element
-
-## More practice available via a jsfiddle?
