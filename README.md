@@ -19,3 +19,9 @@
 2. Test to see if the DOM element is added
 3. Test to see if the button removes the item from the array
 3. Test to see if the DOM no longer contains the element
+
+## Bonus: Node http-server
+
+1. [Install Node](https://nodejs.org/download/)
+2. npm install -g http-server
+3. run http-server in the root of this project
