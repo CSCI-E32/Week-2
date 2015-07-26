@@ -1,10 +1,10 @@
 
 var Playlist = function(){
   // initialize
-  this.playlist = ["one", "two", "three"];
+  this.playlist = JSON.parse(sessionStorage.getItem('playlist')) || [];
   this.listenAddSong();
 
-  this.updatePlaylistDom();
+  this.updatePlaylist();
 
 };
 Playlist.prototype.listenAddSong = function(){
@@ -18,10 +18,14 @@ Playlist.prototype.listenAddSong = function(){
 };
 Playlist.prototype.addSong = function(song){
   this.playlist.push(song);
-  this.updatePlaylistDom();
+  this.updatePlaylist();
 };
 Playlist.prototype.removeSong = function(index){
   this.playlist.splice(index, 1);
+  this.updatePlaylist();
+};
+Playlist.prototype.updatePlaylist = function() {
+  sessionStorage.setItem('playlist', JSON.stringify(this.playlist));
   this.updatePlaylistDom();
 };
 Playlist.prototype.updatePlaylistDom = function(){
@@ -32,6 +36,7 @@ Playlist.prototype.updatePlaylistDom = function(){
     $(removeButton).click(function(){
       that.removeSong(index);
     });
+    $(removeButton).addClass("btn");
 
     var li = document.createElement('li');
     li.appendChild(document.createTextNode(song));
